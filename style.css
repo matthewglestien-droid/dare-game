@@ -10,19 +10,19 @@ body {
     padding: 10px;
 }
 
-/* Main app container */
+/* Main app container (the white box) */
 .app {
-    background: white;
+    position: relative;
+    background: #fe9f9f; /* default box color */
     padding: 30px;
     border-radius: 20px;
     width: 90%;
     max-width: 400px;
     text-align: center;
     box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, background 0.3s ease;
 }
 
-/* Animate container on hover */
 .app:hover {
     transform: scale(1.02);
 }
@@ -33,6 +33,58 @@ h1 {
     margin-bottom: 20px;
     color: #ff4b5c;
     text-shadow: 2px 2px #ffd6d6;
+}
+
+/* Settings icon (top-right gear) */
+#settingsIcon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+#settingsIcon.open {
+    transform: rotate(20deg);
+}
+
+/* Settings panel */
+.settings-panel {
+    max-height: 0;            /* hidden by default */
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    border: 1px solid #ccc;
+    padding: 0 15px;          /* top/bottom padding animates */
+    border-radius: 12px;
+    margin: 15px 0;
+    background: #fafafa;
+    text-align: left;
+}
+
+.settings-panel.open {
+    max-height: 200px;        /* adjust based on content */
+    padding: 15px;
+}
+
+.settings-panel h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.settings-panel label {
+    display: block;
+    margin: 8px 0 5px;
+}
+
+#bgColorPicker,
+#boxColorPicker {
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
 }
 
 /* Dare text styling */
@@ -57,7 +109,6 @@ button {
     transition: all 0.2s ease;
 }
 
-/* Button hover animation */
 button:hover {
     background: #ff758f;
     transform: scale(1.05);
