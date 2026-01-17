@@ -7,16 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app">
+    <div class="app" id="appBox">
+        <!-- Settings gear icon -->
+        <div id="settingsIcon">⚙️</div>
+
         <h1>Dare Generator</h1>
 
         <!-- Mode selector --> 
         <label for="modeSelect">Choose Mode:</label>
         <select id="modeSelect">
-            <option value="school">school</option>
+            <option value="school">School</option>
             <option value="funny">Funny</option>
             <option value="challenge">Challenge</option>
         </select>
+
+        <!-- Settings panel -->
+        <div class="settings-panel" id="settingsPanel">
+            <h2>Settings</h2>
+            <label for="bgColorPicker">Page Background Color:</label>
+            <input type="color" id="bgColorPicker" value="#ff9a9e">
+
+            <label for="boxColorPicker">Box Color:</label>
+            <input type="color" id="boxColorPicker" value="#fe9f9f">
+        </div>
 
         <div id="dareText">Click "Roll" to start!</div>
         <button id="rollButton">Roll</button>
