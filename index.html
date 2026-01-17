@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dare Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <h1>Dare Generator</h1>
+
+        <!-- Mode selector --> 
+        <label for="modeSelect">Choose Mode:</label>
+        <select id="modeSelect">
+            <option value="school">school</option>
+            <option value="funny">Funny</option>
+            <option value="challenge">Challenge</option>
+        </select>
+
+        <div id="dareText">Click "Roll" to start!</div>
+        <button id="rollButton">Roll</button>
+    </div>
+
+    <!-- Sound effect -->
+    <audio id="rollSound" src="roll-sound.mp3"></audio>
+
+    <script src="dare-app.js"></script>
+</body>
+</html>
