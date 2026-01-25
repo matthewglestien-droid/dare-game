@@ -2,42 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- App title -->
+    <title>Dare Generator</title>
+
+    <!-- PWA manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Mobile support (IMPORTANT) -->
+    <meta name="theme-color" content="#fe7171">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dare Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app" id="appBox">
-        <!-- Settings gear icon -->
-        <div id="settingsIcon">⚙️</div>
 
-        <h1>Dare Generator</h1>
+<div class="app" id="appBox">
 
-        <!-- Mode selector --> 
-        <label for="modeSelect">Choose Mode:</label>
-        <select id="modeSelect">
-            <option value="school">School</option>
-            <option value="funny">Funny</option>
-            <option value="challenge">Challenge</option>
-        </select>
-
-        <!-- Settings panel -->
-        <div class="settings-panel" id="settingsPanel">
-            <h2>Settings</h2>
-            <label for="bgColorPicker">Page Background Color:</label>
-            <input type="color" id="bgColorPicker" value="#ff9a9e">
-
-            <label for="boxColorPicker">Box Color:</label>
-            <input type="color" id="boxColorPicker" value="#fe9f9f">
-        </div>
-
-        <div id="dareText">Click "Roll" to start!</div>
-        <button id="rollButton">Roll</button>
+    <div class="top-icons">
+        <div id="settingsIcon" class="icon">⚙️</div>
+        <div id="ratingIcon" class="icon">⭐</div>
+        <div id="creditsIcon" class="icon">ℹ️</div>
     </div>
 
-    <!-- Sound effect -->
-    <audio id="rollSound" src="roll-sound.mp3"></audio>
+    <h1>Dare Generator</h1>
 
-    <script src="dare-app.js"></script>
+    <select id="modeSelect">
+        <option value="school">School</option>
+        <option value="funny">Funny</option>
+        <option value="challenge">Challenge</option>
+    </select>
+
+    <!-- SETTINGS -->
+    <div class="panel" id="settingsPanel">
+        <h3>Settings</h3>
+        <label>Background Color</label>
+        <input type="color" id="bgColorPicker" value="#ff9a9e">
+
+        <label>Box Color</label>
+        <input type="color" id="boxColorPicker" value="#fe7171">
+    </div>
+
+    <!-- RATING -->
+    <div class="panel" id="ratingPanel">
+        <h3>Rate App</h3>
+        <div class="rating" id="appRating">
+            <span data-value="1">★</span>
+            <span data-value="2">★</span>
+            <span data-value="3">★</span>
+            <span data-value="4">★</span>
+            <span data-value="5">★</span>
+        </div>
+
+        <textarea id="commentInput" placeholder="Write a comment..."></textarea>
+        <button id="submitReview">Submit</button>
+        <div id="comments"></div>
+    </div>
+
+    <!-- CREDITS -->
+    <div class="panel" id="creditsPanel">
+        <h3>Credits</h3>
+        <p><strong>App:</strong> Dare Generator by: Matthew Elias</p>
+        <p><strong>Created By:</strong> Matthew Elias</p>
+        <p><strong>Assistant:</strong> Macey</p>
+        <p><strong>Version:</strong> 1.0</p>
+    </div>
+
+    <div id="dareText">Click Roll to start!</div>
+    <button id="rollButton">🎲 Roll</button>
+</div>
+
+<audio id="rollSound" src="roll-sound.mp3"></audio>
+<audio id="settingsSound" src="Sound Effect - Mouse Click.mp3"></audio>
+
+<script src="dare-app.js"></script>
 </body>
 </html>
