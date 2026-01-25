@@ -2,12 +2,12 @@ self.addEventListener("install", e => {
   e.waitUntil(
     caches.open("dare-app").then(cache => {
       return cache.addAll([
-        "./",
-        "./index.html",
-        "./style.css",
-        "./dare-app.js",
-        "./roll-sound.mp3",
-        "./Sound Effect - Mouse Click.mp3"
+        "/dare-game/",
+        "/dare-game/index.html",
+        "/dare-game/style.css",
+        "/dare-game/dare-app.js",
+        "/dare-game/roll-sound.mp3",
+        "/dare-game/Sound Effect - Mouse Click.mp3"
       ]);
     })
   );
