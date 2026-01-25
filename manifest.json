@@ -1,7 +1,7 @@
 {
   "name": "Dare Generator",
   "short_name": "Dares",
-  "start_url": "./index.html",
+  "start_url": "/dare-game/",
   "display": "standalone",
   "background_color": "#ff9a9e",
   "theme_color": "#fe7171",
