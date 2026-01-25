@@ -7,7 +7,7 @@ self.addEventListener("install", e => {
         "./style.css",
         "./dare-app.js",
         "./roll-sound.mp3",
-        "./settings-click.mp3"
+        "./Sound Effect - Mouse Click.mp3"
       ]);
     })
   );
